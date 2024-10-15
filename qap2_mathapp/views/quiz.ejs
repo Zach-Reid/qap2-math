@@ -1,0 +1,22 @@
+<%- include('partials/header') %>
+<main class="main-content">
+    <h1>Math Quiz</h1>
+    <p>Answer the question below:</p>
+    <p><strong>Question:</strong> <%= question %></p>
+
+    <form action="/quiz" method="POST">
+        <label for="answer">Your Answer:</label>
+        <input type="text" id="answer" name="answer" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <p>Current Streak: <strong><%= currentStreak %></strong></p>
+
+    <!-- Button to go back to the homepage -->
+    <a href="/" class="button">Back to Home</a>
+</main>
+</body>
+</html>
+
+
+
